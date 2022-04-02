@@ -1,4 +1,4 @@
-cambios = 'NEO-ELIASBOT BETA\n-Comando lol creado\n-Creado changelog\n-Comando insulto\n-Evento elias creado\n-Evento lol/un lol creado\n-Llevo desde las 9 haciendo esto ayuda por favor como hago para que reproduzca musica alguien digame ya no aguanto este sufrimiento saquenme de aqui pablo me tiene en su sotano programando al neoelias para reemplazar al elias de carne y hueso'
+cambios = 'NEO-ELIASBOT BETA\n\n-Comando lol creado\n-Creado changelog\n-Comando insulto\n-Evento elias creado\n-Evento lol/un lol creado\n-Llevo desde las 9 haciendo esto ayuda por favor como hago para que reproduzca musica alguien digame ya no aguanto este sufrimiento saquenme de aqui pablo me tiene en su sotano programando al neoelias para reemplazar al elias de carne y hueso'
 
 elias = [
     'elias',
