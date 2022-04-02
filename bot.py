@@ -24,8 +24,8 @@ async def printConsoleMessage(event):
         mensaje = random.choice(respuestas.lol)
         await event.message.respond(f'{mensaje} \n<@&810955574488465420>')
 
-#@bot.listen(hikari.GuildMessageCreateEvent)
-#async def printConsoleMessage(event):
+# @bot.listen(hikari.GuildMessageCreateEvent)
+# async def printConsoleMessage(event):
 #    if(event.author.id == 320649011000246272):
 #         await event.message.respond('Cesar envio el mensaje')
 #    elif(event.author.id != 809479840444186654):
@@ -34,22 +34,24 @@ async def printConsoleMessage(event):
 
 # Comandos
 @bot.command
-@lightbulb.command('insulto', 'Dice un insulto racial!') #Nombre del comando, descripcion
+@lightbulb.command('insulto', 'Dice un insulto racial!')
 @lightbulb.implements(lightbulb.SlashCommand)
-async def pingCommand(ctx):
+async def insultoCDO(ctx):
     await ctx.respond(random.choice(respuestas.insulto))
 
+
 @bot.command
-@lightbulb.command('lol', 'Quieres jugar lol?') #Nombre del comando, descripcion
+@lightbulb.command('lol', 'Quieres jugar lol?')
 @lightbulb.implements(lightbulb.SlashCommand)
-async def pingCommand(ctx):
+async def lolCDO(ctx):
     mensaje = random.choice(respuestas.lol)
     await ctx.respond(f'{mensaje}" \n<@&810955574488465420>')
 
+
 @bot.command
-@lightbulb.command('changelog', 'Ver los registros de cambio') #Nombre del comando, descripcion
+@lightbulb.command('changelog', 'Ver los registros de cambio')
 @lightbulb.implements(lightbulb.SlashCommand)
-async def pingCommand(ctx):
+async def changelogCDO(ctx):
     await ctx.respond(respuestas.cambios)
 
 bot.run()
