@@ -53,6 +53,6 @@ async def pingCommand(ctx):
 @lightbulb.command('Changelog', 'Ver los registros de cambio') #Nombre del comando, descripcion
 @lightbulb.implements(lightbulb.SlashCommand)
 async def pingCommand(ctx):
-    await ctx.respond()
+    await ctx.respond(respuestas.cambios)
 
 bot.run()
