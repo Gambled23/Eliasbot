@@ -75,3 +75,33 @@ insulto =['negro', 'nigga', 'puta', 'chinga tu madre joto', 'te gusta el arroz c
  '¿Qué hace una mujer fuera de la cocina? Turismo',
  've a hacerme un sandwich elfa :v',
  'a la cocina pta :vvv']
+pablo = ['pablo', 'pablo?', 'pablo-kun', 'pa-pablo', 'quien es ese guapo', 'pinche pablo guapo', 'pablo chapulin', 'traiganme a pablito', 'don chapulin', 'no digan pablo']
+lol = [
+    'lol', 
+    'callate', 
+    'pls no', 
+    'dejen el vicio',
+    'UN PINCHE LOLASO',
+    'ni me gankeas a la verga',
+    'lole',
+    'https://youtu.be/kvhUNv59XdY',
+    'yo antes tenía un amigo pero hace unos años desapareció',
+    'main lux',
+    'ya terminaste tu tarea?',
+    'te voy a coger',
+    'inviten',
+    'un dota 2',
+    'a ver',
+    'te tqm por favor no juegues lol',
+    'No grasias',
+    'perdió su vida en el lol',
+    'Quien fue? Román? Alan? Massimo?',
+    'ya están grandecitos we ya porfa',
+    'main renekton',
+    'main pyke',
+    'main teemo',
+    'main morgana',
+    'main vladimir',
+    'un lolaso',
+    'un baropepas'
+]

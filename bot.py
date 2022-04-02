@@ -27,4 +27,12 @@ async def botStarted(event):
 @lightbulb.implements(lightbulb.SlashCommand)
 async def pingCommand(ctx):
     await ctx.respond(random.choice(respuestas.insulto))
+
+@bot.command
+@lightbulb.command('lol', 'Quieres jugar lol?') #Nombre del comando, descripcion
+@lightbulb.implements(lightbulb.SlashCommand)
+async def pingCommand(ctx):
+    mensaje = random.choice(respuestas.lol)
+    await ctx.respond(f'{mensaje}" \n<@&810955574488465420>')
+
 bot.run()
