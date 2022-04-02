@@ -15,18 +15,32 @@ async def botStarted(event):
     print("Bot has been started")
 
 
-@bot.listen(hikari.GuildMessageCreateEvent) #Eventos de decir cierta palabra sin regex
+@bot.listen(hikari.GuildMessageCreateEvent)
 async def printConsoleMessage(event):
     if(event.content == 'elias'):
         mensaje = random.choice(respuestas.elias)
         await event.message.respond(f'"{mensaje}" \n-Elias')
-    if(event.content == 'lol' or 'un lol'):
+
+@bot.listen(hikari.GuildMessageCreateEvent)
+async def printConsoleMessage(event):
+    if(event.content == 'lol'):
         mensaje = random.choice(respuestas.lol)
         await event.message.respond(f'{mensaje}" \n<@&810955574488465420>')
-    if(event.author.id == 320649011000246272):
-        print("Cesar mando el mensaje")
-    else:
-        print("Alguien mas mando el mensaje")
+
+@bot.listen(hikari.GuildMessageCreateEvent)
+async def printConsoleMessage(event):
+    if(event.content == 'un lol'):
+        mensaje = random.choice(respuestas.lol)
+        await event.message.respond(f'{mensaje}" \n<@&810955574488465420>')
+
+#@bot.listen(hikari.GuildMessageCreateEvent)
+#async def printConsoleMessage(event):
+#    if(event.author.id == 320649011000246272):
+#         await event.message.respond('Cesar envio el mensaje')
+#    elif(event.author.id != 809479840444186654):
+#         await event.message.respond('Alguien mas envio el mensaje')
+
+
 # Comandos
 @bot.command
 @lightbulb.command('insulto', 'Dice un insulto racial!') #Nombre del comando, descripcion
