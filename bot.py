@@ -13,7 +13,8 @@ bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGM
 @bot.listen(hikari.GuildMessageCreateEvent)
 async def printConsoleMessage(event):
     if(event.content == 'elias'):
-        await event.message.respond(random.choice(respuestas.elias))
+        mensaje = random.choice(respuestas.elias)
+        await event.message.respond(f'"{mensaje}" \n-Elias')
 
 @bot.listen(hikari.StartedEvent)
 async def botStarted(event):
