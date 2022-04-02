@@ -1,3 +1,5 @@
+cambios = 'NEO-ELIASBOT BETA\n-Comando lol creado\n-Creado changelog\n-Comando insulto\n-Evento elias creado\n-Evento lol/un lol creado\n-Llevo desde las 9 haciendo esto ayuda por favor como hago para que reproduzca musica alguien digame ya no aguanto este sufrimiento saquenme de aqui pablo me tiene en su sotano programando al neoelias para reemplazar al elias de carne y hueso'
+
 elias = [
     'elias',
     'No subo gordas',
@@ -67,6 +69,7 @@ elias = [
     'AAAAAAAAAAAAA',
     'Te quiero mucho'
 ]
+
 insulto =['negro', 'nigga', 'puta', 'chinga tu madre joto', 'te gusta el arroz con popote', 'veta a la verga',
  'putas mujeres', 'putos judios', 'putos israelitas', 'putos negros', 'el elias se la come',
  'a cuanto el kilo de verga', 'yo solo quiero amor', 'putos blancos', 'putos africanos', 'putos sodomitas',
@@ -75,7 +78,9 @@ insulto =['negro', 'nigga', 'puta', 'chinga tu madre joto', 'te gusta el arroz c
  '¿Qué hace una mujer fuera de la cocina? Turismo',
  've a hacerme un sandwich elfa :v',
  'a la cocina pta :vvv']
+
 pablo = ['pablo', 'pablo?', 'pablo-kun', 'pa-pablo', 'quien es ese guapo', 'pinche pablo guapo', 'pablo chapulin', 'traiganme a pablito', 'don chapulin', 'no digan pablo']
+
 lol = [
     'lol', 
     'callate', 
