@@ -20,18 +20,9 @@ async def printConsoleMessage(event):
     if(event.content == 'elias'):
         mensaje = random.choice(respuestas.elias)
         await event.message.respond(f'"{mensaje}" \n-Elias')
-
-@bot.listen(hikari.GuildMessageCreateEvent)
-async def printConsoleMessage(event):
-    if(event.content == 'lol'):
+    elif(event.content == 'lol' or event.content == 'un lol'):
         mensaje = random.choice(respuestas.lol)
-        await event.message.respond(f'{mensaje}" \n<@&810955574488465420>')
-
-@bot.listen(hikari.GuildMessageCreateEvent)
-async def printConsoleMessage(event):
-    if(event.content == 'un lol'):
-        mensaje = random.choice(respuestas.lol)
-        await event.message.respond(f'{mensaje}" \n<@&810955574488465420>')
+        await event.message.respond(f'{mensaje} \n<@&810955574488465420>')
 
 #@bot.listen(hikari.GuildMessageCreateEvent)
 #async def printConsoleMessage(event):
