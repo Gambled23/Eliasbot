@@ -110,3 +110,19 @@ lol = [
     'un lolaso',
     'un baropepas'
 ]
+
+uwu = [
+    'UwU',
+    'no uwus',
+    'el uwu esta prohibido en este servidor',
+    'tqm']
+
+matarse = [
+    'Estas bien bro?',
+    'No te mates',
+    'Quieres hablar?',
+    'Necesitas ayuda?',
+    'Bro no te mates por fabor',
+    'Todo bien?',
+    'Alguien ayude a mi pana',
+    'Eliasbot te ama no te mates por favor']
