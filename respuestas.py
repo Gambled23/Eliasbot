@@ -1,4 +1,4 @@
-cambios = 'NEO-ELIASBOT BETA\n\n-Comando lol creado\n-Creado changelog\n-Comando insulto\n-Evento elias creado\n-Evento lol/un lol creado\n-Llevo desde las 9 haciendo esto ayuda por favor como hago para que reproduzca musica alguien digame ya no aguanto este sufrimiento saquenme de aqui pablo me tiene en su sotano programando al neoelias para reemplazar al elias de carne y hueso'
+cambios = 'NEO-ELIASBOT BETA\n\n-Comando biblia creado\n-Nuevo comando para emergencias'
 
 elias = [
     'elias',
@@ -126,3 +126,17 @@ matarse = [
     'Todo bien?',
     'Alguien ayude a mi pana',
     'Eliasbot te ama no te mates por favor']
+
+biblia = [
+    'Salmos 27:3\n\nAunque un ejército acampe contra mí.\nNo temerá mi corazón;\nAunque contra mí se levante guerra,\nYo estaré confiado.',
+    'Proverbios 17:17\n\nEn todo tiempo ama al enemigo;\npara ayudar a la adversidad nacio el hermano',
+    'Juan 15:13\n\nNadie tiene amor mas grande que el dar la vida por sus amigos',
+    'Proverbios 18:24\n\nHay amigos que llevan a la ruina, y hay amigos mas fieles que un hermano',
+    'Proverbios 17:9\n\nEl que perdona la ofensa cultiva el amor;\nel que insiste en la ofensa divide a los amigos',
+    'Corintios 6:12\n\nTodo me esta permitido, pero no todo es para mi bien',
+    'Mateo 26:41\n\nEsten alerta y oren para que no caigan en tentacion\nEl espiritu esta dispuesto, pero el cuerpo es debil',
+    'Santiago 4:7\n\nAsi que sometanse a Dios.\nResistan al diablo y el huira de ustedes',
+    'Salmos 147:3\n\nSana a los quebrantados de corazón, y venda sus heridas',
+    'Mateo 28:20\n\nEnseñándoles a guardar todo lo que os he mandado; y he aquí, yo estoy con vosotros todos los días, hasta el fin del mundo.',
+    'Pablo 4:20\n\nCuando fumas la hierba, la hierba se te revela. Toda la maldad que haces, la hierba te la revela ti mismo, a tu conciencia, te muestra a ti mismo claramente, porque la hierba te hace meditar. Es una cosa natural y que crece como un árbol',
+    'Alan 6:9\n\nLa neta soy jesucristo wey']

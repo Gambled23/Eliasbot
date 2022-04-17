@@ -13,7 +13,7 @@ bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGM
 @bot.listen(hikari.StartedEvent)
 async def botStarted(event):
     print("Bot has been started")
-
+    
 
 @bot.listen(hikari.GuildMessageCreateEvent)
 async def printConsoleMessage(event):
@@ -62,12 +62,12 @@ async def lolCDO(ctx):
     mensaje = random.choice(respuestas.lol)
     await ctx.respond(f'{mensaje}" \n<@&810955574488465420>')
 
-
-@bot.command
-@lightbulb.command('changelog', 'Ver los registros de cambio')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def changelogCDO(ctx):
-    await ctx.respond(respuestas.cambios)
+#Crashea por alguna razon!!
+#@bot.command
+#@lightbulb.command('changelog', 'Ver los registros de cambio')
+#@lightbulb.implements(lightbulb.SlashCommand)
+#async def changelogCDO(ctx):
+#    await ctx.respond(respuestas.cambios)
 
 @bot.command
 @lightbulb.command('auxilio', 'Solo usalo en una emergencia si necesitas hablar con alguien')
@@ -75,5 +75,11 @@ async def changelogCDO(ctx):
 async def auxilioCDO(ctx):
     mensaje = f'<@&315186853986828290> Creo que {ctx.author.username} necesita hablar con alguien, escuchenlo, yo lo haria pero solo soy eliasbot :('
     await ctx.respond(mensaje)
-    
+
+@bot.command
+@lightbulb.command('biblia', 'Genera una frase biblica')
+@lightbulb.implements(lightbulb.SlashCommand)
+async def auxilioCDO(ctx):
+    mensaje = random.choice(respuestas.biblia)
+    await ctx.respond(mensaje)
 bot.run()
