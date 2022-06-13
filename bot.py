@@ -60,7 +60,7 @@ async def insultoCDO(ctx):
 @lightbulb.implements(lightbulb.SlashCommand)
 async def lolCDO(ctx):
     mensaje = random.choice(respuestas.lol)
-    await ctx.respond(f'{mensaje}" \n<@&810955574488465420>')
+    await ctx.respond(f'{mensaje} \n<@&810955574488465420>')
 
 #Crashea por alguna razon!!
 #@bot.command
