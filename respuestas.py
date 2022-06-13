@@ -107,6 +107,11 @@ lol = [
     'main teemo',
     'main morgana',
     'main vladimir',
+    'main aphelios',
+    'main amomo',
+    'main hecarim',
+    'main te meo',
+    'main dr mundo',
     'un lolaso',
     'un baropepas'
 ]
