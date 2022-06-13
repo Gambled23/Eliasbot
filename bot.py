@@ -84,8 +84,9 @@ async def auxilioCDO(ctx):
     await ctx.respond(mensaje)
 
 @bot.command
-@lightbulb.command('Donaciones', 'Ayuda a pagar el host del bot donando')
+@lightbulb.command('donaciones', 'Ayuda a pagar el host del bot donando')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def donaciones(ctx):
     ctx.respond('Hostear eliasbot 24/7 cuesta dinero, si quieres apoyar al eliasbot y al capitalismo dame dinero UwU\nhttps://paypal.me/Gambled23')
+
 bot.run()
