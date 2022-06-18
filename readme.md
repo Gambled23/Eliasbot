@@ -19,10 +19,11 @@ El bot se basa en 2 archivos principales, bot.py y respuestas.py, la declaracion
 Para crear un comando slash debes de seguir la siguiente sintaxis
 ```py
 @bot.command
-@lightbulb.command('nombreDelComando', 'descripcionDelComando!')
+@lightbulb.command('nombreDelComando', 'descripcionDelComando')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def nombreFuncion(ctx):
-    await ctx.respond(texto/variables)
+    #YOUR CODE GOES HERE
+    await ctx.respond(texto/variables) #Esta linea manda un mensaje de regreso en el canal al que se envio el comando
 ```
 Todos los comandos se deben crear dentro del archivo bot.py.
 
