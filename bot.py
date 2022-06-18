@@ -73,4 +73,10 @@ async def auxilioCDO(ctx):
 async def donaciones(ctx):
     await ctx.respond('Hostear eliasbot 24/7 cuesta dinero, si quieres apoyar al eliasbot y al capitalismo dame dinero UwU\nhttps://paypal.me/Gambled23')
 
+@bot.command
+@lightbulb.command('contribuir', 'Obten el repositorio paara contribuir al bot')
+@lightbulb.implements(lightbulb.SlashCommand)
+async def repositorio(ctx):
+    await ctx.respond('Por seguridad el repositorio debe ser privado UwU\nMandame tu correo de github para agregarte como colaborador 👉👈')
+
 bot.run()
