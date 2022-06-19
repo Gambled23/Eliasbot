@@ -4,6 +4,7 @@ import random
 import hikari
 import lightbulb
 
+
 bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGMo75i8CQYM',
                        # La id del server para que el slash command no tarde tanto
                        default_enabled_guilds=(315186853986828290)
@@ -38,6 +39,8 @@ async def printConsoleMessage(event):
         await event.message.respond(mensaje)
     elif(event.content == 'pendejo' or event.content == 'baboso'):
         await event.message.respond('<@567039496533573632> ahi te hablan')
+    elif(event.content == '5'or event.content == 'cinco' or event.content == 'Cinco'):
+        await event.message.respond('Por el culo te la hinco')   
 
 # Comandos
 @bot.command
