@@ -18,29 +18,35 @@ async def botStarted(event):
 
 @bot.listen(hikari.GuildMessageCreateEvent)
 async def printConsoleMessage(event):
-    if(event.content == 'elias'):
-        mensaje = random.choice(respuestas.elias)
-        await event.message.respond(f'"{mensaje}" \n-Elias')
-    elif(event.content == 'lol' or event.content == 'un lol'):
-        mensaje = random.choice(respuestas.lol)
-        await event.message.respond(f'{mensaje} \n<@&810955574488465420>')
-    elif(event.content == 'que ricas patas'):
-        await event.message.respond(f'A ver {event.author.username} :eyes:')
-    elif(event.content == 'Las mujeres no sirven para nada'):
-        await event.message.respond(f'jajajaja q risa {event.author.username} con tus payasadas eres un naco y estupido')    
-    elif(event.content == 'se logro' or event.content == 'se logró'):
-        await event.message.respond(f'Chinga tu madre {event.author.username}')
-    elif(event.content == 'uwu' or event.content == 'UwU' or event.content == 'UWU'):
-        if(event.author.id != 809479840444186654):
-            mensaje = random.choice(respuestas.uwu)
+    match event.content:
+        case 'elias':
+            mensaje = random.choice(respuestas.elias)
+            await event.message.respond(f'"{mensaje}" \n-Elias')
+        case 'lol'|'un lol':
+            mensaje = random.choice(respuestas.lol)
+            await event.message.respond(f'{mensaje} \n<@&810955574488465420>')
+        case 'que ricas patas':
+            await event.message.respond(f'A ver {event.author.username} :eyes:')
+        case 'Las mujeres no sirven para nada':
+            await event.message.respond(f'jajajaja q risa {event.author.username} con tus payasadas eres un naco y estupido')
+        case 'se logro'|'se logró':
+            await event.message.respond(f'Chinga tu madre {event.author.username}')
+        case 'uwu'|'UwU'|'UWU':
+            if(event.author.id != 809479840444186654): #Si el autor no fue el bot
+                mensaje = random.choice(respuestas.uwu)
+                await event.message.respond(mensaje)
+        case 'me quiero matar'|'me voy a matar'|'me voy a pegar un tiro'|'ya matenme':
+            mensaje = random.choice(respuestas.matarse)
             await event.message.respond(mensaje)
-    elif (event.content == 'Me quiero matar' or event.content == 'Me voy a matar' or event.content == 'me voy a pegar un tiro' or event.content == 'me voy a suicidar' or event.content == 'voy a matarme'):
-        mensaje = random.choice(respuestas.matarse)
-        await event.message.respond(mensaje)
-    elif(event.content == 'pendejo' or event.content == 'baboso'):
-        await event.message.respond('<@567039496533573632> ahi te hablan')
-    elif(event.content == '5'or event.content == 'cinco' or event.content == 'Cinco'):
-        await event.message.respond('Por el culo te la hinco')   
+        case 'pendejo'|'baboso':
+            await event.message.respond('<@567039496533573632> ahi te hablan')
+        case '5'|'cinco':
+            await event.message.respond('Por el culo te la hinco')  
+        case '13'|'trece':
+            await event.message.respond('Entre más me la mamas más me crece')  
+        case 'eliasbot podemos jugar lol?':
+            await event.message.respond(random.choice(['Sí', 'No', 'Quizás']))
+        
 
 # Comandos
 @bot.command
@@ -91,5 +97,6 @@ async def volado(ctx):
         await ctx.respond('Ha salido cara papu')
     else:
         await ctx.respond('Ha salido cruz uwu')
+
     
 bot.run()
