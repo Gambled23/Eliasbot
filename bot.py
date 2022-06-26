@@ -82,4 +82,14 @@ async def donaciones(ctx):
 async def repositorio(ctx):
     await ctx.respond('Por seguridad el repositorio debe ser privado UwU\nMandame tu correo de github para agregarte como colaborador 👉👈')
 
+@bot.command
+@lightbulb.command('volado','Lanza una moneda, cara o cruz')
+@lightbulb.implements(lightbulb.SlashCommand)
+async def volado(ctx):
+    resultado = random.choice([True, False])
+    if resultado:
+        await ctx.respond('Ha salido cara papu')
+    else:
+        await ctx.respond('Ha salido cruz uwu')
+    
 bot.run()
