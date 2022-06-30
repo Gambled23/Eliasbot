@@ -21,12 +21,12 @@ async def printConsoleMessage(event):
     match event.content:
         case 'elias':
             mensaje = random.choice(respuestas.elias)
-            await event.message.respond(f'"{mensaje}" \n-Elias')
+            mensajeFinal = '"' + mensaje + '"' + '\n-Elias'
         case 'lol'|'un lol':
             mensaje = random.choice(respuestas.lol)
-            await event.message.respond(f'{mensaje} \n<@&810955574488465420>')
+            mensajeFinal = mensaje + '\n<@&810955574488465420>'
         case 'que ricas patas':
-            await event.message.respond(f'A ver {event.author.username} :eyes:')
+            mensajeFinal = 'a ver ' + event.author.username + ' :eyes:'
         case 'Las mujeres no sirven para nada':
             mensajeFinal = 'jajajaja q risa ' + event.author.username +' con tus payasadas eres un naco y estupido'
         case 'se logro'|'se logró':
