@@ -9,7 +9,7 @@ bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGM
                        # La id del server para que el slash command no tarde tanto
                        default_enabled_guilds=(315186853986828290)
                        )
-
+mensajeFinal = ''
 # Eventos
 @bot.listen(hikari.StartedEvent)
 async def botStarted(event):
@@ -28,25 +28,27 @@ async def printConsoleMessage(event):
         case 'que ricas patas':
             await event.message.respond(f'A ver {event.author.username} :eyes:')
         case 'Las mujeres no sirven para nada':
-            await event.message.respond(f'jajajaja q risa {event.author.username} con tus payasadas eres un naco y estupido')
+            mensajeFinal = 'jajajaja q risa ' + event.author.username +' con tus payasadas eres un naco y estupido'
         case 'se logro'|'se logró':
-            await event.message.respond(f'Chinga tu madre {event.author.username}')
+            mensajeFinal = 'Chinga tu madre' + event.author.username
         case 'uwu'|'UwU'|'UWU':
             if(event.author.id != 809479840444186654): #Si el autor no fue el bot
-                mensaje = random.choice(respuestas.uwu)
-                await event.message.respond(mensaje)
+                mensajeFinal = random.choice(respuestas.uwu)
         case 'me quiero matar'|'me voy a matar'|'me voy a pegar un tiro'|'ya matenme':
-            mensaje = random.choice(respuestas.matarse)
-            await event.message.respond(mensaje)
+            mensajeFinal = random.choice(respuestas.matarse)
         case 'pendejo'|'baboso':
-            await event.message.respond('<@567039496533573632> ahi te hablan')
+            mensajeFinal = '<@567039496533573632> ahi te hablan'
         case '5'|'cinco':
-            await event.message.respond('Por el culo te la hinco')  
+            mensajeFinal = 'Por el culo te la hinco'
         case '13'|'trece':
-            await event.message.respond('Entre más me la mamas más me crece')  
+            mensajeFinal = 'Entre más me la mamas más me crece'
         case 'eliasbot podemos jugar lol?':
-            await event.message.respond(random.choice(['Sí', 'No', 'Quizás']))
-        
+            mensajeFinal = random.choice(['Sí', 'No', 'Quizás'])
+        case 'chinga tu madre'|'ctm'|'chinga tu madre pues':
+            mensajeFinal = 'la tuya en vinagre'
+        case 'pruebota':
+            mensajeFinal = 'Mira soy un test'
+    await event.message.respond(mensajeFinal)
 
 # Comandos
 @bot.command
@@ -98,5 +100,4 @@ async def volado(ctx):
     else:
         await ctx.respond('Ha salido cruz uwu')
 
-    
 bot.run()
