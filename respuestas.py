@@ -145,3 +145,18 @@ biblia = [
     'Mateo 28:20\n\nEnseñándoles a guardar todo lo que os he mandado; y he aquí, yo estoy con vosotros todos los días, hasta el fin del mundo.',
     'Pablo 4:20\n\nCuando fumas la hierba, la hierba se te revela. Toda la maldad que haces, la hierba te la revela ti mismo, a tu conciencia, te muestra a ti mismo claramente, porque la hierba te hace meditar. Es una cosa natural y que crece como un árbol',
     'Alan 6:9\n\nLa neta soy jesucristo wey']
+
+seisnueve = [
+    'funny number',
+    'numero chistoso',
+    'se antoja',
+    '( ͡° ͜ʖ ͡°)',
+    ':smirk:',
+    'y no invitan']
+
+cuatroveinte = [
+    'saca la mota',
+    'funny number',
+    'numero chistoso',
+    'invita',
+    ':maple_leaf:']
