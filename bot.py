@@ -51,7 +51,7 @@ async def printConsoleMessage(event):
         case 'que bonita estas':
             mensajeFinal = 'No le sabes a los acentos ' + event.author.username
         case '#p boys dont cry'|'#p the cure boys dont cry'|'#p boys dont cry the cure':
-            mensajeFinal = 'tas bien bro?'
+            mensajeFinal = random.choice(['tas bien bro?', 'bro...', 'booooys doooont cryyyy'])
         case 'un baropapas':
             mensajeFinal = random.choice(['Letsfuckingooooo', 'pensé q nunca lo dirías', 'BAROPAPASALAVERGA'])
         case 'ramiro':
