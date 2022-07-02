@@ -160,3 +160,11 @@ cuatroveinte = [
     'numero chistoso',
     'invita',
     ':maple_leaf:']
+
+sexo = [
+    'ya we',
+    'sexo',
+    'sexo?',
+    'sexooo',
+    'alan sexo',
+    'sex alert']

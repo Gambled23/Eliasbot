@@ -62,6 +62,8 @@ async def printConsoleMessage(event):
             mensajeFinal = 'andele pendeja'
         case 'Eliasbot podemos jugar lol?'|'eliasbot podemos jugar lol?':
             mensajeFinal = random.choice(['sí','no'])
+        case 'sex':
+            mensajeFinal = random.choice(respuestas.sexo)
         case '69'|'sesenta y nueve':
             mensajeFinal = random.choice(respuestas.seisnueve)
         case '420'|'4:20'|'cuatro veinte':
