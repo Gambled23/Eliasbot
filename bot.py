@@ -102,7 +102,13 @@ async def printConsoleMessage(event):
         case "boys dont cry"|"boys don't cry"|"Boys don't cry"|"Boys dont cry":
             if (event.author.id != 809479840444186654):
                 mensajeFinal = "BOOOOOYS DON'T CRYYY"
-                
+        
+
+
+#        case 'puto pablo pitudo':
+#            await bot.update_voice_state(315186853986828290, 757380223821152296) #meterse a elias anal
+#        case 'puto pablo pitudo 3':
+#            await bot.update_voice_state(315186853986828290, None) #desconectarse del canal
     await event.message.respond(mensajeFinal)
 
 # Comandos
@@ -154,5 +160,8 @@ async def volado(ctx):
         await ctx.respond('Ha salido cara papu')
     else:
         await ctx.respond('Ha salido cruz uwu')
+
+
+
 
 bot.run()
