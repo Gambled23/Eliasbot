@@ -9,7 +9,6 @@ bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGM
                        # La id del server para que el slash command no tarde tanto
                        default_enabled_guilds=(315186853986828290)
                        )
-mensajeFinal = ''
 # Eventos
 @bot.listen(hikari.StartedEvent)
 async def botStarted(event):
@@ -109,7 +108,8 @@ async def printConsoleMessage(event):
 #            await bot.update_voice_state(315186853986828290, 757380223821152296) #meterse a elias anal
 #        case 'puto pablo pitudo 3':
 #            await bot.update_voice_state(315186853986828290, None) #desconectarse del canal
-    await event.message.respond(mensajeFinal)
+    if (mensajeFinal):
+        await event.message.respond(mensajeFinal)
 
 # Comandos
 @bot.command
