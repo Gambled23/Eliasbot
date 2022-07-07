@@ -1,9 +1,10 @@
 from ctypes import sizeof
+import imp
 import respuestas
 import random
 import hikari
 import lightbulb
-
+import uwuMode
 
 bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGMo75i8CQYM',
                        # La id del server para que el slash command no tarde tanto
@@ -161,7 +162,11 @@ async def volado(ctx):
     else:
         await ctx.respond('Ha salido cruz uwu')
 
-
-
+@bot.command
+@lightbulb.option('frase', 'frase a uwuificar')
+@lightbulb.command('uwuify','uwuifica una frase')
+@lightbulb.implements(lightbulb.SlashCommand)
+async def uwuify(ctx):
+    await ctx.respond(uwuMode.generateUwU(ctx.options.frase))
 
 bot.run()
