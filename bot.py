@@ -103,12 +103,6 @@ async def printConsoleMessage(event):
             if (event.author.id != 809479840444186654):
                 mensajeFinal = "BOOOOOYS DON'T CRYYY"
         
-
-
-#        case 'puto pablo pitudo':
-#            await bot.update_voice_state(315186853986828290, 757380223821152296) #meterse a elias anal
-#        case 'puto pablo pitudo 3':
-#            await bot.update_voice_state(315186853986828290, None) #desconectarse del canal
     if (mensajeFinal):
         await event.message.respond(mensajeFinal)
 
@@ -168,5 +162,20 @@ async def volado(ctx):
 @lightbulb.implements(lightbulb.SlashCommand)
 async def uwuify(ctx):
     await ctx.respond(uwuMode.generateUwU(ctx.options.frase))
+
+#@bot.command
+#@lightbulb.option('channelid', 'voiceChannelID')
+#@lightbulb.command('conectarse','se conecta a un canal de voz')
+#@lightbulb.implements(lightbulb.SlashCommand)
+##async def voiceConnect(ctx):
+#    await bot.update_voice_state(315186853986828290, ctx.options.channelid)
+#    await ctx.respond('Conectado al canal')
+
+#@bot.command
+#@lightbulb.command('desconectarse','se desconecta de un canal de voz')
+#@lightbulb.implements(lightbulb.SlashCommand)
+#async def voiceDisconnect(ctx):
+#    await bot.update_voice_state(315186853986828290, None)
+#    await ctx.respond('Desconectado del canal')
 
 bot.run()
