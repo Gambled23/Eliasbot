@@ -10,7 +10,9 @@ frozenlist==1.3.0
 hikari==2.0.0.dev108
 hikari-lightbulb==2.2.1
 idna==3.3
+lavasnek-rs == 0.1.0a5
 multidict==6.0.2
 pycodestyle==2.8.0
+spotipy == 2.20.0
 toml==0.10.2
 yarl==1.7.2

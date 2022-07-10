@@ -10,6 +10,9 @@ bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGM
                        # La id del server para que el slash command no tarde tanto
                        default_enabled_guilds=(315186853986828290)
                        )
+                       
+bot.load_extensions_from('./extensions')
+
 # Eventos
 @bot.listen(hikari.StartedEvent)
 async def botStarted(event):
@@ -162,6 +165,8 @@ async def volado(ctx):
 @lightbulb.implements(lightbulb.SlashCommand)
 async def uwuify(ctx):
     await ctx.respond(uwuMode.generateUwU(ctx.options.frase))
+
+
 
 #@bot.command
 #@lightbulb.option('channelid', 'voiceChannelID')
