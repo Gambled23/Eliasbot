@@ -105,9 +105,12 @@ async def printConsoleMessage(event):
         case "boys dont cry"|"boys don't cry"|"Boys don't cry"|"Boys dont cry":
             if (event.author.id != 809479840444186654):
                 mensajeFinal = "BOOOOOYS DON'T CRYYY"
-        
-    if (mensajeFinal):
+
+    try:
         await event.message.respond(mensajeFinal)
+    except:
+        mensajeFinal = ''
+        
 
 # Comandos
 @bot.command
