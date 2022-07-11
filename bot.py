@@ -169,5 +169,16 @@ async def volado(ctx):
 async def uwuify(ctx):
     await ctx.respond(uwuMode.generateUwU(ctx.options.frase))
 
+#@bot.command
+#@lightbulb.command('testeo','comando de prueba')
+#@lightbulb.implements(lightbulb.SlashCommand)
+#async def testeo(ctx):
+#    em = hikari.Embed(title="Elias dice:", color=0x32441C)
+#    em.add_field(
+#        name=random.choice(respuestas.elias),
+#        value="-Elias",
+#        inline=False,
+#    )
+#    await ctx.respond(em)
 
 bot.run()
