@@ -1,5 +1,3 @@
-from ctypes import sizeof
-import imp
 import respuestas
 import random
 import hikari
@@ -110,64 +108,6 @@ async def printConsoleMessage(event):
         await event.message.respond(mensajeFinal)
     except:
         mensajeFinal = ''
-        
-
-# Comandos
-@bot.command
-@lightbulb.command('insulto', 'Dice un insulto racial!')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def insultoCDO(ctx):
-    await ctx.respond(random.choice(respuestas.insulto))
-
-@bot.command
-@lightbulb.command('lol', 'Quieres jugar lol?')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def lolCDO(ctx):
-    mensaje = random.choice(respuestas.lol)
-    await ctx.respond(f'{mensaje} \n<@&810955574488465420>')
-
-@bot.command
-@lightbulb.command('auxilio', 'Solo usalo en una emergencia si necesitas hablar con alguien')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def auxilioCDO(ctx):
-    mensaje = f'<@&315186853986828290> Creo que {ctx.author.username} necesita hablar con alguien, escuchenlo, yo lo haria pero solo soy eliasbot :('
-    await ctx.respond(mensaje)
-
-@bot.command
-@lightbulb.command('biblia', 'Genera una frase biblica')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def auxilioCDO(ctx):
-    mensaje = random.choice(respuestas.biblia)
-    await ctx.respond(mensaje)
-
-@bot.command
-@lightbulb.command('donaciones', 'Ayuda a pagar el host del bot donando')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def donaciones(ctx):
-    await ctx.respond('Hostear eliasbot 24/7 cuesta dinero, si quieres apoyar al eliasbot y al capitalismo dame dinero UwU\nhttps://paypal.me/Gambled23')
-
-@bot.command
-@lightbulb.command('contribuir', 'Obten el repositorio paara contribuir al bot')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def repositorio(ctx):
-    await ctx.respond('Por seguridad el repositorio debe ser privado UwU\nMandame tu correo de github para agregarte como colaborador 👉👈')
-
-@bot.command
-@lightbulb.command('volado','Lanza una moneda, cara o cruz')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def volado(ctx):
-    resultado = random.choice([True, False])
-    if resultado:
-        await ctx.respond('Ha salido cara papu')
-    else:
-        await ctx.respond('Ha salido cruz uwu')
-
-@bot.command
-@lightbulb.option('frase', 'frase a uwuificar')
-@lightbulb.command('uwuify','uwuifica una frase')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def uwuify(ctx):
-    await ctx.respond(uwuMode.generateUwU(ctx.options.frase))
 
 #@bot.command
 #@lightbulb.command('testeo','comando de prueba')
