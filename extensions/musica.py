@@ -232,7 +232,7 @@ async def leave(ctx: lightbulb.Context) -> None:
 
 @music_plugin.command()
 @lightbulb.option("file", "Archivo mp3 que quieres reproducir (no testeado)", hikari.Attachment, required=False)
-@lightbulb.option("query", "Nombre o URL de la canción que quieres reproducir (spotify/youtube)",
+@lightbulb.option("query", "Titulo o URL de la canción que quieres reproducir (spotify/youtube)",
                   modifier=lightbulb.OptionModifier.CONSUME_REST, required=False, autocomplete=True)
 @lightbulb.command("play", "busca y reproduce una canción(usa una opción solamente)", auto_defer=True,
                    aliases=["p", "pl"], pass_options=True)
@@ -314,7 +314,7 @@ async def play(ctx: lightbulb.Context, query: str, file: hikari.Attachment) -> N
         return
 
     emb = hikari.Embed(title="**Añadida a la cola!**", color=ctx.author.accent_color)
-    emb.add_field(name="Nombre", value=f"[{name}]({uri})", inline=False)
+    emb.add_field(name="Titulo", value=f"[{name}]({uri})", inline=False)
     emb.add_field(name="Artista", value=query_information.tracks[0].info.author, inline=False)
     emb.add_field(name="Duración", value=f"{int(length[0])}:{round(length[1] / 1000):02}", inline=False)
     emb.set_thumbnail(thumb)
@@ -532,7 +532,7 @@ async def resume(ctx: lightbulb.Context) -> None:
     try:
         length = divmod(node.now_playing.track.info.length, 60000)
         position = divmod(node.now_playing.track.info.position, 60000)
-        embed.add_field(name="Duration Played",
+        embed.add_field(name="Tiempo actual",
                         value=f"{int(position[0])}:{round(position[1] / 1000):02}/{int(length[0])}:{round(length[1] / 1000):02}")
     except:
         pass
@@ -555,7 +555,7 @@ async def now_playing(ctx: lightbulb.Context) -> None:
         status = "**▶ Reproduciendo actualmente**"
 
     embed = hikari.Embed(title=status, color=ctx.author.accent_color)
-    embed.add_field(name="Nombre", value=f"[{node.now_playing.track.info.title}]({node.now_playing.track.info.uri})",
+    embed.add_field(name="Titulo", value=f"[{node.now_playing.track.info.title}]({node.now_playing.track.info.uri})",
                     inline=False)
     embed.add_field(name="Artista", value=node.now_playing.track.info.author, inline=False)
     identifier = node.now_playing.track.info.identifier
@@ -564,7 +564,7 @@ async def now_playing(ctx: lightbulb.Context) -> None:
     try:
         length = divmod(node.now_playing.track.info.length, 60000)
         position = divmod(node.now_playing.track.info.position, 60000)
-        embed.add_field(name="Duration Played",
+        embed.add_field(name="Tiempo actual",
                         value=f"{int(position[0])}:{round(position[1] / 1000):02}/{int(length[0])}:{round(length[1] / 1000):02}")
     except:
         pass
