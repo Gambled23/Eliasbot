@@ -170,20 +170,4 @@ async def uwuify(ctx):
     await ctx.respond(uwuMode.generateUwU(ctx.options.frase))
 
 
-
-#@bot.command
-#@lightbulb.option('channelid', 'voiceChannelID')
-#@lightbulb.command('conectarse','se conecta a un canal de voz')
-#@lightbulb.implements(lightbulb.SlashCommand)
-##async def voiceConnect(ctx):
-#    await bot.update_voice_state(315186853986828290, ctx.options.channelid)
-#    await ctx.respond('Conectado al canal')
-
-#@bot.command
-#@lightbulb.command('desconectarse','se desconecta de un canal de voz')
-#@lightbulb.implements(lightbulb.SlashCommand)
-#async def voiceDisconnect(ctx):
-#    await bot.update_voice_state(315186853986828290, None)
-#    await ctx.respond('Desconectado del canal')
-
 bot.run()
