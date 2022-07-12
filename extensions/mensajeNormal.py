@@ -5,7 +5,7 @@ import respuestas
 
 mensajeNormal = lightbulb.Plugin('mensajenormal', 'Responder a un mensaje sin slash o prefijo')
 
-@mensajeNormal.listen(hikari.GuildMessageCreateEvent)
+@mensajeNormal.listener(hikari.GuildMessageCreateEvent)
 async def printConsoleMessage(event):
     match event.content:
         case 'elias':
@@ -96,3 +96,6 @@ async def printConsoleMessage(event):
         await event.message.respond(mensajeFinal)
     except:
         mensajeFinal = ''
+
+def load(bot):
+    bot.add_plugin(mensajeNormal)

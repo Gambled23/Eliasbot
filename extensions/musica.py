@@ -394,7 +394,7 @@ async def seek(ctx: lightbulb.Context, time) -> None:
     try:
         length = divmod(node.now_playing.track.info.length, 60000)
 
-        embed.add_field(name="Current Position", value=f"{time}/{int(length[0])}:{round(length[1] / 1000):02}")
+        embed.add_field(name="Posición actual", value=f"{time}/{int(length[0])}:{round(length[1] / 1000):02}")
     except:
         pass
     await ctx.respond(embed=embed)
