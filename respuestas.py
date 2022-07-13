@@ -92,8 +92,6 @@ lol = [
     'https://youtu.be/kvhUNv59XdY',
     'yo antes tenía un amigo pero hace unos años desapareció',
     'main lux',
-    'ya terminaste tu tarea?',
-    'te voy a coger',
     'inviten',
     'un dota 2',
     'a ver',
@@ -113,8 +111,12 @@ lol = [
     'main te meo',
     'main dr mundo',
     'un lolaso',
-    'un baropepas'
-]
+    'un baropepas',
+    'pinche shaco',
+    'puta lux castrosa',
+    'amomo main',
+    'ligoleyen',
+    'joto el que vaya jungla']
 
 uwu = [
     'UwU',
@@ -152,14 +154,18 @@ seisnueve = [
     'se antoja',
     '( ͡° ͜ʖ ͡°)',
     ':smirk:',
-    'y no invitan']
+    'y no invitan',
+    '96']
 
 cuatroveinte = [
     'saca la mota',
     'funny number',
     'numero chistoso',
     'invita',
-    ':maple_leaf:']
+    ':maple_leaf:',
+    'saca de la chistosa',
+    'saca de la que dejó a pablo bien trabado',
+    'no se droguen']
 
 sexo = [
     'ya we',
@@ -167,7 +173,14 @@ sexo = [
     'sexo?',
     'sexooo',
     'alan sexo',
-    'sex alert']
+    'sex alert'
+    'y no invitas',
+    'presenta',
+    'se antoja',
+    'elijo el camino del celibato',
+    'practiquen la abstinencia',
+    'no gracias',
+    'sex']
 
 dm = [
     'Qué quieres puto negro',
