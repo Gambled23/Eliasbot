@@ -168,3 +168,19 @@ sexo = [
     'sexooo',
     'alan sexo',
     'sex alert']
+
+dm = [
+    'Qué quieres puto negro',
+    'No me hables judío de mierda',
+    'Este bot no es para DMs puto imbecil',
+    'Te quiero mucho uwu',
+    'Deja de joder',
+    'Puto acosador por qué me mandas dm',
+    'No me hables por dm hijo de la verga',
+    'Puto',
+    'Putos todos ya no quiero vivir',
+    'Hablame por el server pinche morro',
+    'Pa q vergas me hablas por aquí moderfoker',
+    'Puto estupido',
+    'Pinche morro no me hables',
+    'Puto negro dejame en paz']
