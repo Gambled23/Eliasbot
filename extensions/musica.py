@@ -231,29 +231,16 @@ async def leave(ctx: lightbulb.Context) -> None:
 
 
 @music_plugin.command()
-@lightbulb.option("file", "Archivo mp3 que quieres reproducir (no testeado)", hikari.Attachment, required=False)
 @lightbulb.option("query", "Titulo o URL de la canción que quieres reproducir (spotify/youtube)",
                   modifier=lightbulb.OptionModifier.CONSUME_REST, required=False, autocomplete=True)
 @lightbulb.command("play", "busca y reproduce una canción(usa una opción solamente)", auto_defer=True,
                    aliases=["p", "pl"], pass_options=True)
 @lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
-async def play(ctx: lightbulb.Context, query: str, file: hikari.Attachment) -> None:
+async def play(ctx: lightbulb.Context, query: str) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
     if not voice_state:
         embed = hikari.Embed(title="**No estás en un canal de voz**", colour=0xC80000)
-        await ctx.respond(embed=embed)
-        return
-
-    if file:
-        if file.url.endswith("mp3") or file.url.endswith(".flac"):
-            query = file.url
-        else:
-            embed = hikari.Embed(title="**Solo archivos mp3 y flac son aceptados**", colour=0xC80000)
-            await ctx.respond(embed=embed)
-            return
-    elif not query and not file:
-        embed = hikari.Embed(title="**Ingresa la canción a reproducir**", colour=0xC80000)
         await ctx.respond(embed=embed)
         return
 
