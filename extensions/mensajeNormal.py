@@ -99,7 +99,7 @@ async def printConsoleMessage(event):
     try:
         await event.message.respond(mensajeFinal)
     except:
-        mensajeFinal = ''
+        pass
 
 def load(bot):
     bot.add_plugin(mensajeNormal)

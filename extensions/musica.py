@@ -194,10 +194,15 @@ async def _join(ctx: lightbulb.Context) -> Optional[hikari.Snowflake]:
 
     return channel_id
 
+@music_plugin.command
+@lightbulb.command('musica', 'todos los comandos de musica')
+@lightbulb.implements(lightbulb.SlashCommandGroup)
+async def my_group(ctx):
+    pass
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("join", "entra a tu canal de voz", auto_defer=True)
-@lightbulb.implements(lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def join(ctx: lightbulb.Context) -> None:
     channel_id = await _join(ctx)
     if channel_id:
@@ -205,9 +210,9 @@ async def join(ctx: lightbulb.Context) -> None:
         await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("leave", "sale del canal de voz", auto_defer=True, aliases=["stop"])
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def leave(ctx: lightbulb.Context) -> None:
     assert (ctx.get_guild)
     await music_plugin.d.lavalink.destroy(ctx.guild_id)
@@ -230,12 +235,12 @@ async def leave(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.option("query", "Titulo o URL de la canción que quieres reproducir (spotify/youtube)",
                   modifier=lightbulb.OptionModifier.CONSUME_REST, required=False, autocomplete=True)
 @lightbulb.command("play", "busca y reproduce una canción(usa una opción solamente)", auto_defer=True,
                    aliases=["p", "pl"], pass_options=True)
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def play(ctx: lightbulb.Context, query: str) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -319,10 +324,10 @@ async def play_autocomplete(opt: hikari.AutocompleteInteractionOption, inter: hi
     return [track.info.title for track in query.tracks[:5]]
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.option("percentage", "0-200%", int, max_value=200, min_value=0, default=100)
 @lightbulb.command("volumen", "Cambia el volumen de la musica", auto_defer=True, aliases=["v"], pass_options=True)
-@lightbulb.implements(lightbulb.SlashCommand, lightbulb.PrefixCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def volume(ctx: lightbulb.Context, percentage: int) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -351,10 +356,10 @@ async def volume(ctx: lightbulb.Context, percentage: int) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.option("time", "¿A qué minuto quieres ir? (usa el formato 0:00)", modifier=lightbulb.OptionModifier.CONSUME_REST)
 @lightbulb.command("adelantar", "Salta a un punto especifico de la canción", auto_defer=True, aliases=["se"], pass_options=True)
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def seek(ctx: lightbulb.Context, time) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -387,9 +392,9 @@ async def seek(ctx: lightbulb.Context, time) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("aleatorio", "Ponle aleatorio a la cola!", aliases=["sf"])
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def shuffle(ctx: lightbulb.Context) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -421,9 +426,9 @@ async def shuffle(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("replay", "Replayea la canción actual", auto_defer=True, aliases=["rp"])
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def replay(ctx: lightbulb.Context) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -441,9 +446,9 @@ async def replay(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("skip", "skipea a la siguiente canción", auto_defer=True, aliases=["sk"])
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def skip(ctx: lightbulb.Context) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -471,9 +476,9 @@ async def skip(ctx: lightbulb.Context) -> None:
                 description=f"**Canción saltada:** {skipped_track.title}\n**Reproduciendo ahora:** {new_track.title}"))
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("pausar", "Pausa la canción actual", auto_defer=True, aliases=["ps"])
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def pause(ctx: lightbulb.Context) -> None:
     assert (ctx.guild_id)
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
@@ -499,9 +504,9 @@ async def pause(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("continuar", "Continua la canción actual", auto_defer=True, aliases=["unpause", "rs"])
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def resume(ctx: lightbulb.Context) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -526,9 +531,9 @@ async def resume(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("reproduciendoahora", "Ver qué se está reproduciendo actualmente.", auto_defer=True, aliases=["np", "playing"])
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def now_playing(ctx: lightbulb.Context) -> None:
     node = await music_plugin.d.lavalink.get_guild_node(ctx.guild_id)
     if not node or not node.now_playing:
@@ -559,9 +564,9 @@ async def now_playing(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("cola", "Muestra la cola de reproducción", aliases=["q", "que"], auto_defer=True)
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def queue(ctx: lightbulb.Context) -> None:
     node = await music_plugin.d.lavalink.get_guild_node(ctx.guild_id)
     if not node or not node.now_playing:
@@ -594,10 +599,10 @@ async def queue(ctx: lightbulb.Context) -> None:
     await navigator.run(ctx)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.option("index", "Index de la canción a eliminar", int, required=True)
 @lightbulb.command("eliminar", "Quita una canción de la cola", auto_defer=True, aliases=["r"], pass_options=True)
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def remove(ctx: lightbulb.Context, index) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -633,11 +638,11 @@ async def remove(ctx: lightbulb.Context, index) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.option("position", "La posición de la canción en la cola", int, required=True)
 @lightbulb.command("skipto", "skipea a una posición de la cola", auto_defer=True, aliases=["skto"],
                    pass_options=True)
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def skipto(ctx: lightbulb.Context, position: int) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -679,9 +684,9 @@ async def skipto(ctx: lightbulb.Context, position: int) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("loop", "Pone en loop la canción actual", auto_defer=True, aliases=["repeat", "lp"])
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def loop(ctx: lightbulb.Context) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -706,12 +711,12 @@ async def loop(ctx: lightbulb.Context) -> None:
         await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.option("new_position", "La nueva posición de la canción en la cola", int, required=True)
 @lightbulb.option("current_position", "La posición actual de la canción en la cola", int, required=True)
 @lightbulb.command("reordenar", "Mueve una canción de posición en la cola", auto_defer=True, aliases=["mv"],
                    pass_options=True)
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def move(ctx: lightbulb.Context, current_position, new_position) -> None:
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
     voice_state = [state async for state in states.iterator().filter(lambda i: i.user_id == ctx.author.id)]
@@ -748,9 +753,9 @@ async def move(ctx: lightbulb.Context, current_position, new_position) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("vaciar", "Limpia la cola de reproducción", auto_defer=True, aliases=["clear"])
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def empty(ctx: lightbulb.Context) -> None:
     assert (ctx.guild_id)
     states = music_plugin.bot.cache.get_voice_states_view_for_guild(ctx.guild_id)
@@ -775,9 +780,9 @@ async def empty(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("newreleases", "Ve los ultimos lanzamientos de hoy", auto_defer=True)
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def newreleases(ctx: lightbulb.Context) -> None:
     sp = spotipy.Spotify(
         auth_manager=SpotifyClientCredentials(client_id=SPOTCLIENT_ID, client_secret=SPOTCLIENT_SECRET))
@@ -795,9 +800,9 @@ async def newreleases(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.command("trending", "Ver los tracks que están de moda", auto_defer=True)
-@lightbulb.implements(lightbulb.PrefixCommand, lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def trending(ctx: lightbulb.Context) -> None:
     sp = spotipy.Spotify(
         auth_manager=SpotifyClientCredentials(client_id=SPOTCLIENT_ID, client_secret=SPOTCLIENT_SECRET))
@@ -817,11 +822,11 @@ async def trending(ctx: lightbulb.Context) -> None:
     await ctx.respond(embed=embed)
 
 
-@music_plugin.command()
+@my_group.child
 @lightbulb.option("artist", "Artista de la canción", str, required=True)
 @lightbulb.option("title", "Titulo de la canción", str, required=True)
 @lightbulb.command("letra", "Letras de la canción", auto_defer=True, aliases=["ly"], pass_options=True)
-@lightbulb.implements(lightbulb.SlashCommand)
+@lightbulb.implements(lightbulb.SlashSubCommand)
 async def lyrics(ctx: lightbulb.Context, artist: str, title: str) -> None:
     url = URL.build(scheme="https", host="api.lyrics.ovh", path=f"/v1/{artist}/{title}")
     async with ctx.bot.d.aio_session.get(url) as resp:
