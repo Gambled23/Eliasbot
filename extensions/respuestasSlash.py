@@ -6,13 +6,13 @@ import respuestas
 respuestasSlash = lightbulb.Plugin('Respuestas', 'Respuestas usando el slash')
 
 @respuestasSlash.command
-@lightbulb.command('putopablo', 'Dice un insulto racial!')
+@lightbulb.command('insulto', 'Dice un insulto racial!')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def insultoCDO(ctx):
     await ctx.respond(random.choice(respuestas.insulto))
 
 @respuestasSlash.command
-@lightbulb.command('putopablo2', 'Quieres jugar lol?')
+@lightbulb.command('lol', 'Quieres jugar lol?')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def lolCDO(ctx):
     mensaje = random.choice(respuestas.lol)
