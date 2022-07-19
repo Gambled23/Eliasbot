@@ -1,6 +1,6 @@
 import hikari
 import lightbulb
-from extensions import cumpleanos
+import cumpleanos
 
 bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGMo75i8CQYM',
                        # La id del server para que el slash command no tarde tanto
@@ -12,6 +12,7 @@ bot.load_extensions_from('./extensions')
 @bot.listen(hikari.StartedEvent)
 async def botStarted(event):
     print("Eliasbot ha iniciado correctamente, bienvenido, Gambled")
+    cumpleanos.verificarCumpleaños()
     
     
 '''

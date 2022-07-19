@@ -18,4 +18,4 @@ def verificarCumpleaños():
         if x[1] == hoy.tm_mday and x[2] == hoy.tm_mon:
             print(x)
         else:
-            print('Hoy no es cumpleaños de nadie')
+            print('Hoy no es cumpleaños de', x[0])
