@@ -4,6 +4,7 @@ import cumpleanos
 
 
 
+
 import sys
 from colorama import init
 init(strip=not sys.stdout.isatty()) # strip colors if stdout is redirected
@@ -25,9 +26,13 @@ async def botStarted(event):
        'white', attrs=['bold'])
     cprint(figlet_format('made by: gambled23', font='straight'),
        'yellow')   
-    cumpleanos.verificarCumpleaños()
     
-    
+    #Cada que se inicia el bot revisa si es el cumpleaños de alguien
+    cumpleañero = cumpleanos.verificarCumpleaños()
+    if cumpleañero != None:
+        await bot.rest.create_message(320650670258520065, f'<@&315186853986828290> hoy es el CUM del <@{cumpleañero[3]}>\nFeliz CUM te desea Eliasbot :birthday: :partying_face:')
+
+
 '''
 @bot.command
 @lightbulb.command('testeo','comando de prueba')
