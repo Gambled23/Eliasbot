@@ -1,7 +1,11 @@
+import imp
 import hikari
 import lightbulb
 import cumpleanos
-import time 
+import time
+import random 
+import respuestas
+import os
 
 hoy = time.gmtime()
 
@@ -33,20 +37,5 @@ async def botStarted(event):
     cumpleañero = cumpleanos.verificarCumpleaños()
     if cumpleañero != None:
         await bot.rest.create_message(320650670258520065, f'Hoy es el CUM del <@{cumpleañero[3]}>\nFeliz CUM numero {hoy.tm_year - 2003} te desea Eliasbot :birthday: :partying_face:')
-
-
-'''
-@bot.command
-@lightbulb.command('testeo','comando de prueba')
-@lightbulb.implements(lightbulb.SlashCommand)
-async def testeo(ctx):
-    em = hikari.Embed(title="Elias dice:", color=0x32441C)
-    em.add_field(
-        name=random.choice(respuestas.elias),
-        value="-Elias",
-        inline=False,
-    )
-    await ctx.respond(em)
-'''
 
 bot.run()

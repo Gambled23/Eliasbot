@@ -1,7 +1,9 @@
+import imp
 import hikari
 import lightbulb
 import random
 import respuestas
+import os
 
 mensajeNormal = lightbulb.Plugin('mensajenormal', 'Responder a un mensaje sin slash o prefijo')
 
@@ -9,8 +11,9 @@ mensajeNormal = lightbulb.Plugin('mensajenormal', 'Responder a un mensaje sin sl
 async def printConsoleMessage(event):
     match event.content:
         case 'elias':
-            mensaje = random.choice(respuestas.elias)
-            mensajeFinal = '"' + mensaje + '"' + '\n-Elias'
+            em = hikari.Embed(title="Elias dice:",description= random.choice(respuestas.elias), color=0x007006)
+            em.set_thumbnail('extensions\elias.jpg')
+            await event.message.respond(em)
         case 'lol'|'un lol':
             mensaje = random.choice(respuestas.lol)
             mensajeFinal = mensaje + '\n<@&810955574488465420>'
@@ -94,7 +97,9 @@ async def printConsoleMessage(event):
         case 'Tania' | 'tania':
             mensajeFinal = 'ese nombre está prohibido en este servidor'
         case 'Jazmin' | 'jazmin' | 'Jazmín' | 'jazmín' | 'lizbeth' | 'Lizbeth':
-            mensajeFinal = 'si fue césar denle un putaso por pendejo xfa'            
+            mensajeFinal = 'si fue césar denle un putaso por pendejo xfa'     
+        case 'testing':
+            mensajeFinal = 'puto'       
 
     try:
         await event.message.respond(mensajeFinal)
