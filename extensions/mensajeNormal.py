@@ -12,7 +12,7 @@ async def printConsoleMessage(event):
     match event.content:
         case 'elias':
             em = hikari.Embed(title="Elias dice:",description= random.choice(respuestas.elias), color=0x007006)
-            em.set_thumbnail('extensions\elias.jpg')
+            em.set_thumbnail('https://i.imgur.com/Yddg0yL.jpeg')
             await event.message.respond(em)
         case 'lol'|'un lol':
             mensaje = random.choice(respuestas.lol)
