@@ -1,11 +1,7 @@
-import imp
 import hikari
 import lightbulb
 import cumpleanos
 import time
-import random 
-import respuestas
-import os
 
 hoy = time.gmtime()
 

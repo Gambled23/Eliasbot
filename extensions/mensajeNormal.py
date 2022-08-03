@@ -98,8 +98,6 @@ async def printConsoleMessage(event):
             mensajeFinal = 'ese nombre está prohibido en este servidor'
         case 'Jazmin' | 'jazmin' | 'Jazmín' | 'jazmín' | 'lizbeth' | 'Lizbeth':
             mensajeFinal = 'si fue césar denle un putaso por pendejo xfa'     
-        case 'testing':
-            mensajeFinal = 'puto'       
 
     try:
         await event.message.respond(mensajeFinal)
