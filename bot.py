@@ -1,7 +1,9 @@
 import hikari
 import lightbulb
 import cumpleanos
+import time 
 
+hoy = time.gmtime()
 
 
 
@@ -30,7 +32,7 @@ async def botStarted(event):
     #Cada que se inicia el bot revisa si es el cumpleaños de alguien
     cumpleañero = cumpleanos.verificarCumpleaños()
     if cumpleañero != None:
-        await bot.rest.create_message(320650670258520065, f'<@&315186853986828290> hoy es el CUM del <@{cumpleañero[3]}>\nFeliz CUM te desea Eliasbot :birthday: :partying_face:')
+        await bot.rest.create_message(320650670258520065, f'Hoy es el CUM del <@{cumpleañero[3]}>\nFeliz CUM numero {hoy.tm_year - 2003} te desea Eliasbot :birthday: :partying_face:')
 
 
 '''
