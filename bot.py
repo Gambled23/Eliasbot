@@ -33,6 +33,6 @@ async def botStarted(event):
       await bot.rest.create_message(320650670258520065, f'Hoy es el CUM del <@{cumpleañero[3]}>\nFeliz CUM numero {hoy.tm_year - 2003} te desea Eliasbot :birthday: :partying_face:')
    msg = fechas.revisarFechas()
    if msg:
-      await bot.rest.create_message(776503304867545098, msg)
+      await bot.rest.create_message(320650670258520065, msg)
 
 bot.run()
