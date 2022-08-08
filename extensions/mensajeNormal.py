@@ -10,7 +10,7 @@ mensajeNormal = lightbulb.Plugin('mensajenormal', 'Responder a un mensaje sin sl
 @mensajeNormal.listener(hikari.GuildMessageCreateEvent)
 async def printConsoleMessage(event):
     match event.content:
-        case 'elias':
+        case 'elias'|'elías'|'Elias'|'Elías':
             em = hikari.Embed(title="Elias dice:",description= random.choice(respuestas.elias), color=0x007006)
             em.set_thumbnail('https://i.imgur.com/Yddg0yL.jpeg')
             await event.message.respond(em)
