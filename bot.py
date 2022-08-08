@@ -1,16 +1,14 @@
 import hikari
 import lightbulb
+import sys
 import cumpleanos
+
 import time
+hoy = time.gmtime()
 from extensions import fechas
 
-hoy = time.gmtime()
-
-
-
-import sys
 from colorama import init
-init(strip=not sys.stdout.isatty()) # strip colors if stdout is redirected
+init(strip=not sys.stdout.isatty()) 
 from termcolor import cprint 
 from pyfiglet import figlet_format
 
@@ -30,10 +28,11 @@ async def botStarted(event):
    cprint(figlet_format('made by: gambled23', font='straight'),
       'yellow')   
     
-   #Cada que se inicia el bot revisa si es el cumpleaños de alguien
-   cumpleañero = cumpleanos.verificarCumpleaños()
+   cumpleañero = cumpleanos.verificarCumpleaños() #Cada que se inicia el bot revisa si es el cumpleaños de alguien
    if cumpleañero != None:
       await bot.rest.create_message(320650670258520065, f'Hoy es el CUM del <@{cumpleañero[3]}>\nFeliz CUM numero {hoy.tm_year - 2003} te desea Eliasbot :birthday: :partying_face:')
-   
+   msg = fechas.revisarFechas()
+   if msg:
+      await bot.rest.create_message(776503304867545098, msg)
 
 bot.run()
