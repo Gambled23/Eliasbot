@@ -23,7 +23,7 @@ music_plugin.add_checks(lightbulb.checks.guild_only)
 
 class LavalinkEventHandler:
     async def track_start(self, lavalink: lavasnek_rs.Lavalink, event: lavasnek_rs.TrackStart) -> None:
-        logging.info(f"Track started on guild: {event.guild_id}")
+        logging.info(f"Canción iniciada en la guild: {event.guild_id}")
         try:
             guild_node = await lavalink.get_guild_node(event.guild_id)
             song = await music_plugin.d.lavalink.decode_track(event.track)
@@ -73,7 +73,7 @@ class LavalinkEventHandler:
             await music_plugin.d.lavalink.destroy(event.guild_id)
             await music_plugin.d.lavalink.remove_guild_from_loops(event.guild_id)
             await music_plugin.d.lavalink.remove_guild_node(event.guild_id)
-            logging.info(f"Track finished on guild: {event.guild_id}")
+            logging.info(f"Canción terminada en la guild: {event.guild_id}")
             try:
                 chanid = guild_node.get_data().get("ChannelID")
                 await music_plugin.bot.rest.create_message(chanid,
@@ -84,7 +84,7 @@ class LavalinkEventHandler:
             return
 
     async def track_exception(self, lavalink: lavasnek_rs.Lavalink, event: lavasnek_rs.TrackException) -> None:
-        logging.warning(f"Track exception event happened on guild: {event.guild_id}")
+        logging.warning(f"Evento de exception en guild: {event.guild_id}")
 
         guild_node = await lavalink.get_guild_node(event.guild_id)
         chanid = guild_node.get_data().get("ChannelID")
