@@ -2,6 +2,7 @@ import hikari
 import lightbulb
 import cumpleanos
 import time
+from extensions import fechas
 
 hoy = time.gmtime()
 
@@ -23,15 +24,16 @@ bot.load_extensions_from('./extensions')
 
 @bot.listen(hikari.StartedEvent)
 async def botStarted(event):
-    print('\n\n')
-    cprint(figlet_format('Eliasbot', font='roman'),
-       'white', attrs=['bold'])
-    cprint(figlet_format('made by: gambled23', font='straight'),
-       'yellow')   
+   print('\n\n')
+   cprint(figlet_format('Eliasbot', font='roman'),
+      'white', attrs=['bold'])
+   cprint(figlet_format('made by: gambled23', font='straight'),
+      'yellow')   
     
-    #Cada que se inicia el bot revisa si es el cumpleaños de alguien
-    cumpleañero = cumpleanos.verificarCumpleaños()
-    if cumpleañero != None:
-        await bot.rest.create_message(320650670258520065, f'Hoy es el CUM del <@{cumpleañero[3]}>\nFeliz CUM numero {hoy.tm_year - 2003} te desea Eliasbot :birthday: :partying_face:')
+   #Cada que se inicia el bot revisa si es el cumpleaños de alguien
+   cumpleañero = cumpleanos.verificarCumpleaños()
+   if cumpleañero != None:
+      await bot.rest.create_message(320650670258520065, f'Hoy es el CUM del <@{cumpleañero[3]}>\nFeliz CUM numero {hoy.tm_year - 2003} te desea Eliasbot :birthday: :partying_face:')
+   
 
 bot.run()
