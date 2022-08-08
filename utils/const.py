@@ -54,7 +54,16 @@ URL_REGEX = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^
 TIME_REGEX = r"([0-9]{1,2})[:ms](([0-9]{1,2})s?)?"
 SPOTCLIENT_ID = "4a0509af7d5b4fb0893fe4981dc693b5"
 SPOTCLIENT_SECRET = "5024ca71eb7b4837a737f28f392ae016"
-LAVALINK_SERVER = "lavalink.oops.wtf"
+LAVALINK_SERVER = "node1.gglvxd.tk"
 LAVALINK_PORT = "443"
-LAVALINK_PASSWORD = "www.freelavalink.ga"
+LAVALINK_PASSWORD = "free"
 LAVALINK_SSL = "true"
+
+
+#Para el lavalink desde heroku (necesito compar dyno)
+'''
+LAVALINK_SERVER = "lavalink-eliasbot.herokuapp.com"
+LAVALINK_PORT = "443"
+LAVALINK_PASSWORD = "elias"
+LAVALINK_SSL = "false"
+'''
