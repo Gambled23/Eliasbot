@@ -6,18 +6,23 @@ hoy = time.gmtime()
 
 fechas = lightbulb.Plugin('fechas', 'Funciones para enviar mensaje en ciertas fechas')
 
-async def revisarFechas():
+def revisarFechas():
     if hoy.tm_yday == 69:
-        await fechas.rest.create_message(320650670258520065, f'Hoy es el día 69 del año UwU')
+        return 'Hoy es el día 69 del año UwU'
     if hoy.tm_mon == 4 and hoy.tm_mday == 20:
-        await fechas.rest.create_message(320650670258520065, f'Feliz 4/20 te desea eliasbot :maple_leaf:')
+        return 'Feliz 4/20 te desea eliasbot :maple_leaf:'
     if hoy.tm_mon == 12 and hoy.tm_mday == 25:
-        await fechas.rest.create_message(320650670258520065, f'Feliz navidad te desea eliasbot :mrs_claus:')
+        return 'Feliz navidad te desea eliasbot :mrs_claus:'
     if hoy.tm_mon == 12 and hoy.tm_mday == 24:
-        await fechas.rest.create_message(320650670258520065, f'Feliz nochebuena te desea eliasbot :christmas_tree:')
+        return 'Feliz nochebuena te desea eliasbot :christmas_tree:'
     if hoy.tm_mon == 11 and hoy.tm_mday == 17:
-        await fechas.rest.create_message(320650670258520065, f'Hoy hace {hoy.tm_year - 2019} el gobierno de prepa 9, feliz aniversario les desea eliasbot :Pogchamp:')
-
+        return f'Hoy hace {hoy.tm_year - 2019} el gobierno de prepa 9, feliz aniversario les desea eliasbot :Pogchamp:'
+    if hoy.tm_mon == 5 and hoy.tm_mday == 5:
+        return 'feliz sinco de mayo'
+    if hoy.tm_mon == 1 and hoy.tm_mday == 1:
+        return 'Feliz año nuevo les desea eliasbot :)'
+    if hoy.tm_mon == 12 and hoy.tm_mday == 31:
+        return 'Hoy es el ultimo día del año, eliasbot les agradece por este año'
 
 
 def load(bot):
