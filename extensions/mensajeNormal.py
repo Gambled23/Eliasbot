@@ -11,9 +11,12 @@ mensajeNormal = lightbulb.Plugin('mensajenormal', 'Responder a un mensaje sin sl
 async def printConsoleMessage(event):
     match event.content:
         case 'elias'|'elías'|'Elias'|'Elías':
+            miniaturas = ['https://i.imgur.com/KZjZTzl.jpeg','https://i.imgur.com/Yddg0yL.jpeg','https://i.imgur.com/DfZ6pNi.jpeg','https://i.imgur.com/UvZJza1.jpeg','https://i.imgur.com/QpYUBbC.jpeg']
             em = hikari.Embed(title="Elias dice:",description= random.choice(respuestas.elias), color=0x007006)
-            em.set_thumbnail('https://i.imgur.com/Yddg0yL.jpeg')
+            em.set_thumbnail(random.choice(miniaturas))
             await event.message.respond(em)
+        case 'pablo':
+            mensajeFinal = random.choice(respuestas.pablo)
         case 'lol'|'un lol':
             mensaje = random.choice(respuestas.lol)
             mensajeFinal = mensaje + '\n<@&810955574488465420>'
@@ -22,7 +25,7 @@ async def printConsoleMessage(event):
         case 'Las mujeres no sirven para nada':
             mensajeFinal = 'jajajaja q risa ' + event.author.username +' con tus payasadas eres un naco y estupido'
         case 'se logro'|'se logró':
-            mensajeFinal = 'Chinga tu madre' + event.author.username
+            mensajeFinal = 'Chinga tu madre ' + event.author.username
         case 'uwu'|'UwU'|'UWU':
             if(event.author.id != 809479840444186654): #Si el autor no fue el bot
                 mensajeFinal = random.choice(respuestas.uwu)
@@ -48,19 +51,19 @@ async def printConsoleMessage(event):
             mensajeFinal = random.choice(['Letsfuckingooooo', 'pensé q nunca lo dirías', 'BAROPAPASALAVERGA'])
         case 'ramiro':
             mensajeFinal = 'que chingue su madre ese puto viejo de mierda a la verga pinche señor inútil le voy a clavar un cuchillo en la puta garganta mientras me tomo su sangre y me masturbo en el agujero que le quedó del navajazo'
-        case 'luis':
+        case 'luis'|'Luis':
             mensajeFinal = 'chinga tu madre no me digas luis'
         case 'Roman'|'roman'|'Román'|'román':
             mensajeFinal = 'andele pendeja'
         case 'Eliasbot podemos jugar lol?'|'eliasbot podemos jugar lol?':
             mensajeFinal = random.choice(['sí','no'])
-        case 'sex':
+        case 'sex'|'sexo':
             mensajeFinal = random.choice(respuestas.sexo)
         case '69'|'sesenta y nueve':
             mensajeFinal = random.choice(respuestas.seisnueve)
         case '420'|'4:20'|'cuatro veinte':
             mensajeFinal = random.choice(respuestas.cuatroveinte)
-        case 'skyrim':
+        case 'skyrim'|'Skyrim':
             mensajeFinal = 'puto todd'
         case 'ando bien pedo'|'ando bien pacheco'|'extraño a mi ex'|'ando bien grifo'|'ando bien drogado'|'ando medio pedo':
             mensajeFinal = 'ya duermete wey al chile'

@@ -1,5 +1,3 @@
-cambios = 'NEO-ELIASBOT BETA\n\n-Comando biblia creado\n-Nuevo comando para emergencias'
-
 elias = [
     'elias',
     'No subo gordas',
@@ -67,24 +65,53 @@ elias = [
     'Solo estoy esperando a mi amada',
     'Quedas advertido',
     'AAAAAAAAAAAAA',
-    'Te quiero mucho'
+    'Te quiero mucho',
+    'Di no al acaso',
+    'Pinche perro desgraciado'
 ]
 
-insulto =['negro', 'nigga', 'puta', 'chinga tu madre joto', 'te gusta el arroz con popote', 'veta a la verga',
- 'putas mujeres', 'putos judios', 'putos israelitas', 'putos negros', 'el elias se la come',
- 'a cuanto el kilo de verga', 'yo solo quiero amor', 'putos blancos', 'putos africanos', 'putos sodomitas',
- 'putos mancos', 'putos discapacitados', '¿En qué se parecen las mujeres a las baldosas? en que las dos se pisan',
- '¿En qué se parecen las mujeres a las pelotas? en que a las dos se les pega',
- '¿Qué hace una mujer fuera de la cocina? Turismo',
- 've a hacerme un sandwich elfa :v',
- 'a la cocina pta :vvv']
+insulto = ['negro',
+           'nigga',
+           'puta',
+           'chinga tu madre joto',
+           'te gusta el arroz con popote',
+           'veta a la verga',
+           'putas mujeres',
+           'putos judios',
+           'putos israelitas',
+           'putos negros',
+           'el elias se la come',
+           'a cuanto el kilo de verga',
+           'yo solo quiero amor',
+           'putos blancos',
+           'putos africanos',
+           'putos sodomitas',
+           'putos mancos',
+           'putos discapacitados',
+           '¿En qué se parecen las mujeres a las baldosas? en que las dos se pisan',
+           '¿En qué se parecen las mujeres a las pelotas? en que a las dos se les pega',
+           '¿Qué hace una mujer fuera de la cocina? Turismo',
+           've a hacerme un sandwich elfa :v',
+           'a la cocina pta :vvv'
+           ]
 
-pablo = ['pablo', 'pablo?', 'pablo-kun', 'pa-pablo', 'quien es ese guapo', 'pinche pablo guapo', 'pablo chapulin', 'traiganme a pablito', 'don chapulin', 'no digan pablo']
+pablo = ['pablo',
+         'pablo?',
+         'pablo-kun',
+         'pa-pablo',
+         'quien es ese guapo',
+         'pinche pablo guapo',
+         'pablo chapulin',
+         'traiganme a pablito',
+         'don chapulin',
+         'no digan pablo',
+         'el pablote'
+         ]
 
 lol = [
-    'lol', 
-    'callate', 
-    'pls no', 
+    'lol',
+    'callate',
+    'pls no',
     'dejen el vicio',
     'UN PINCHE LOLASO',
     'ni me gankeas a la verga',
