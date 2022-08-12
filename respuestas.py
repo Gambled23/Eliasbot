@@ -111,44 +111,46 @@ elias = [
     'Nomamen banda\nMe encule 😋\nDe la doctora\nMe hizo sacarle la lengua y decirle A'
 ]
 
-insulto = ['negro',
-           'nigga',
-           'puta',
-           'chinga tu madre joto',
-           'te gusta el arroz con popote',
-           'veta a la verga',
-           'putas mujeres',
-           'putos judios',
-           'putos israelitas',
-           'putos negros',
-           'el elias se la come',
-           'a cuanto el kilo de verga',
-           'yo solo quiero amor',
-           'putos blancos',
-           'putos africanos',
-           'putos sodomitas',
-           'putos mancos',
-           'putos discapacitados',
-           '¿En qué se parecen las mujeres a las baldosas? en que las dos se pisan',
-           '¿En qué se parecen las mujeres a las pelotas? en que a las dos se les pega',
-           '¿Qué hace una mujer fuera de la cocina? Turismo',
-           've a hacerme un sandwich elfa :v',
-           'a la cocina pta :vvv'
-           ]
+insulto = [
+    'negro',
+    'nigga',
+    'puta',
+    'chinga tu madre joto',
+    'te gusta el arroz con popote',
+    'veta a la verga',
+    'putas mujeres',
+    'putos judios',
+    'putos israelitas',
+    'putos negros',
+    'el elias se la come',
+    'a cuanto el kilo de verga',
+    'yo solo quiero amor',
+    'putos blancos',
+    'putos africanos',
+    'putos sodomitas',
+    'putos mancos',
+    'putos discapacitados',
+    '¿En qué se parecen las mujeres a las baldosas? en que las dos se pisan',
+    '¿En qué se parecen las mujeres a las pelotas? en que a las dos se les pega',
+    '¿Qué hace una mujer fuera de la cocina? Turismo',
+    've a hacerme un sandwich elfa :v',
+    'a la cocina pta :vvv'
+]
 
-pablo = ['pablo',
-         'pablo?',
-         'pablo-kun',
-         'pa-pablo',
-         'quien es ese guapo',
-         'pinche pablo guapo',
-         'pablo chapulin',
-         'traiganme a pablito',
-         'don chapulin',
-         'no digan pablo',
-         'el pablote',
-         'no pronunciar el nombre del admin en vano'
-         ]
+pablo = [
+    'pablo',
+    'pablo?',
+    'pablo-kun',
+    'pa-pablo',
+    'quien es ese guapo',
+    'pinche pablo guapo',
+    'pablo chapulin',
+    'traiganme a pablito',
+    'don chapulin',
+    'no digan pablo',
+    'el pablote',
+    'no pronunciar el nombre del admin en vano'
+]
 
 lol = [
     'lol',
@@ -191,7 +193,15 @@ uwu = [
     'UwU',
     'no uwus',
     'el uwu esta prohibido en este servidor',
-    'tqm']
+    'tqm',
+    'uwu',
+    'OwO',
+    'unu',
+    'puto furro',
+    'no uwus allowed',
+    'uwu?',
+    'https://cdn.milenio.com/uploads/media/2021/09/13/que-significa-uwu-shutterstock.jpg'
+    ]
 
 matarse = [
     'Estas bien bro?',
