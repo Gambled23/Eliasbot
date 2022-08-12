@@ -11,8 +11,9 @@ mensajeNormal = lightbulb.Plugin('mensajenormal', 'Responder a un mensaje sin sl
 async def printConsoleMessage(event):
     match event.content:
         case 'elias'|'elías'|'Elias'|'Elías':
-            miniaturas = ['https://i.imgur.com/KZjZTzl.jpeg','https://i.imgur.com/Yddg0yL.jpeg','https://i.imgur.com/DfZ6pNi.jpeg','https://i.imgur.com/UvZJza1.jpeg','https://i.imgur.com/QpYUBbC.jpeg']
-            em = hikari.Embed(title="Elias dice:",description= random.choice(respuestas.elias), color=0x007006)
+            miniaturas = ['https://i.imgur.com/KZjZTzl.jpeg','https://i.imgur.com/Yddg0yL.jpeg','https://i.imgur.com/DfZ6pNi.jpeg','https://i.imgur.com/UvZJza1.jpeg','https://i.imgur.com/QpYUBbC.jpeg','https://i.imgur.com/vH5maCo.jpeg','https://i.imgur.com/8UaJgZG.jpeg','https://i.imgur.com/8NcNFYr.jpeg','https://i.imgur.com/B7yY3iA.jpeg','https://i.imgur.com/lMEGhd4.jpeg','https://i.imgur.com/y9HUEiy.jpeg','https://i.imgur.com/w8vieYN.jpeg','https://i.imgur.com/5hlKexL.jpeg']
+            color = "%06x" % random.randint(0, 0xFFFFFF)
+            em = hikari.Embed(title="Elias dice:",description= random.choice(respuestas.elias), color=color)
             em.set_thumbnail(random.choice(miniaturas))
             await event.message.respond(em)
         case 'pablo':
