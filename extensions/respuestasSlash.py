@@ -32,20 +32,20 @@ async def auxilioCDO(ctx):
     mensaje = random.choice(respuestas.biblia)
     await ctx.respond(mensaje)
 
+'''
 @respuestasSlash.command
 @lightbulb.command('donaciones', 'Ayuda a pagar el host del bot donando')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def donaciones(ctx):
     await ctx.respond('Hostear eliasbot 24/7 cuesta dinero, si quieres apoyar al eliasbot y al capitalismo dame dinero UwU\nhttps://paypal.me/Gambled23')
 
+
 @respuestasSlash.command
 @lightbulb.command('contribuir', 'Obten el repositorio paara contribuir al bot')
 @lightbulb.implements(lightbulb.SlashCommand)
 async def repositorio(ctx):
     await ctx.respond('Por seguridad el repositorio debe ser privado UwU\nMandame tu correo de github para agregarte como colaborador 👉👈')
-
-
-
+'''
 
 def load(bot):
     bot.add_plugin(respuestasSlash)
