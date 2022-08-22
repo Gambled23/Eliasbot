@@ -11,7 +11,11 @@ pip install hikari-lightbulb
 ```
 Despues solo debes ejecutar el bot.py con python, y el bot dejará de usar los archivos que tengas tú en la computadora y no los que estén en el repositorio de github.
 ## Nociones basicas
-El bot se basa en 2 archivos principales, bot.py y respuestas.py, la declaracion de comandos y eventos están contenidos en el archivo bot, el archivo respuestas solo son los arrays con las respuestas para los comandos con varias respuestas.
+El bot se basa en 3 partes principales, bot.py, respuestas.py, y el folder extensions.
+
+Dentro del folder extensions están todos los comandos utiles del bot cada uno en su propio archivo en forma de plugin, si quieres modificar o añadir alguno ahí debes de hacerlo. 
+Respuestas.py son todos los arrays de respuestas random que tiene el bot, como para el comando lol o para el comando elías, si quieres agregar respuestas debe de ser en ese archivo.
+El bot.py solo son las lineas de inicio del bot, así que si no quieres modificar algo que se ejecute cuando se inicia el bot, este archivo no te interesa.
 
 ## Creando nuevo comando slash
 (Solo se usan comandos slash para que el bot responda más rápido)
