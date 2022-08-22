@@ -1,9 +1,7 @@
-import imp
 import hikari
 import lightbulb
 import random
 import respuestas
-import os
 
 mensajeNormal = lightbulb.Plugin('mensajenormal', 'Responder a un mensaje sin slash o prefijo')
 

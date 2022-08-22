@@ -1,3 +1,4 @@
+from operator import truediv
 import hikari
 import lightbulb
 import sys
