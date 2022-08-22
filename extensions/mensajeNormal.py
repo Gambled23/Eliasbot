@@ -8,7 +8,7 @@ import os
 mensajeNormal = lightbulb.Plugin('mensajenormal', 'Responder a un mensaje sin slash o prefijo')
 
 @mensajeNormal.listener(hikari.GuildMessageCreateEvent)
-async def printConsoleMessage(event):
+async def replyGuildMessage(event):
     match event.content:
         case 'elias'|'elías'|'Elias'|'Elías':
             miniaturas = ['https://i.imgur.com/KZjZTzl.jpeg','https://i.imgur.com/Yddg0yL.jpeg','https://i.imgur.com/DfZ6pNi.jpeg','https://i.imgur.com/UvZJza1.jpeg','https://i.imgur.com/QpYUBbC.jpeg','https://i.imgur.com/vH5maCo.jpeg','https://i.imgur.com/8UaJgZG.jpeg','https://i.imgur.com/8NcNFYr.jpeg','https://i.imgur.com/B7yY3iA.jpeg','https://i.imgur.com/lMEGhd4.jpeg','https://i.imgur.com/y9HUEiy.jpeg','https://i.imgur.com/w8vieYN.jpeg','https://i.imgur.com/5hlKexL.jpeg']
@@ -107,6 +107,16 @@ async def printConsoleMessage(event):
         await event.message.respond(mensajeFinal)
     except:
         pass
+
+@mensajeNormal.listener(hikari.DMMessageCreateEvent)
+async def replyDirectMessage(event):
+    if event.is_bot or not event.content: #Para verificar q el mensaje no sea de un bot
+        return
+    if event.content == 'puto':
+        await event.message.respond('No sea grosero mijo')
+    else:
+        await event.message.respond('Por qué me envías DM pinche acosador')
+        #await mensajeNormal.rest.create_message(320650670258520065, 'ayuda ya no quiero ser programador')
 
 def load(bot):
     bot.add_plugin(mensajeNormal)

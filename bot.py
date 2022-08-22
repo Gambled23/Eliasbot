@@ -2,7 +2,6 @@ import hikari
 import lightbulb
 import sys
 import cumpleanos
-
 import time
 hoy = time.gmtime()
 from extensions import fechas
@@ -12,11 +11,11 @@ init(strip=not sys.stdout.isatty())
 from termcolor import cprint 
 from pyfiglet import figlet_format
 
-
 bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGMo75i8CQYM',
                        # La id del server para que el slash command no tarde tanto
                        default_enabled_guilds=(315186853986828290)
                        )
+
                        
 bot.load_extensions_from('./extensions')
 
