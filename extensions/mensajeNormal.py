@@ -7,6 +7,14 @@ mensajeNormal = lightbulb.Plugin('mensajenormal', 'Responder a un mensaje sin sl
 
 @mensajeNormal.listener(hikari.GuildMessageCreateEvent)
 async def replyGuildMessage(event):
+    if(event.author.id != 809479840444186654):
+        txt = event.content
+        numeros = [int(s) for s in txt.split() if s.isdigit()]
+        suma = 0
+        for e in numeros:
+            suma = suma + e
+        if suma == 69:
+            mensajeFinal = 'Felicidades la suma de todos los numeros en tu mensaje da 69'
     match event.content:
         case 'elias'|'elías'|'Elias'|'Elías':
             miniaturas = ['https://i.imgur.com/KZjZTzl.jpeg','https://i.imgur.com/Yddg0yL.jpeg','https://i.imgur.com/DfZ6pNi.jpeg','https://i.imgur.com/UvZJza1.jpeg','https://i.imgur.com/QpYUBbC.jpeg','https://i.imgur.com/vH5maCo.jpeg','https://i.imgur.com/8UaJgZG.jpeg','https://i.imgur.com/8NcNFYr.jpeg','https://i.imgur.com/B7yY3iA.jpeg','https://i.imgur.com/lMEGhd4.jpeg','https://i.imgur.com/y9HUEiy.jpeg','https://i.imgur.com/w8vieYN.jpeg','https://i.imgur.com/5hlKexL.jpeg']
