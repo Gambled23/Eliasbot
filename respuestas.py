@@ -108,7 +108,11 @@ elias = [
     'Tu me pelas la papaya? 👉 👈',
     'Fuk yu nigga',
     'el sol me gana en tamaño pero no en lo caliente',
-    'Nomamen banda\nMe encule 😋\nDe la doctora\nMe hizo sacarle la lengua y decirle A'
+    'Nomamen banda\nMe encule 😋\nDe la doctora\nMe hizo sacarle la lengua y decirle A',
+    'No entiendo ahora el mundo\nNo comprenden el amor',
+    'Puto roqui, se sabe todas las de badbuni',
+    'Te voy a funar',
+    'Todo hombre vuelve a donde fue feliz\nAdopt me me llama'
 ]
 
 insulto = [
@@ -134,8 +138,7 @@ insulto = [
     '¿En qué se parecen las mujeres a las pelotas? en que a las dos se les pega',
     '¿Qué hace una mujer fuera de la cocina? Turismo',
     've a hacerme un sandwich elfa :v',
-    'a la cocina pta :vvv'
-]
+    'a la cocina pta :vvv']
 
 pablo = [
     'pablo',
@@ -149,8 +152,13 @@ pablo = [
     'don chapulin',
     'no digan pablo',
     'el pablote',
-    'no pronunciar el nombre del admin en vano'
-]
+    'no pronunciar el nombre del admin en vano',
+    'quien es ese joto',
+    'el admin',
+    'puro pinche pablo',
+    'ok pero cual es el segundo nombre de pablo???',
+    'ok pero por qué pablo tiene 3 apellidos???',
+    'sexoooo']
 
 lol = [
     'lol',
@@ -200,8 +208,18 @@ uwu = [
     'puto furro',
     'no uwus allowed',
     'uwu?',
-    'https://cdn.milenio.com/uploads/media/2021/09/13/que-significa-uwu-shutterstock.jpg'
-    ]
+    'https://cdn.milenio.com/uploads/media/2021/09/13/que-significa-uwu-shutterstock.jpg',
+    'https://tierragamer.com/wp-content/uploads/2021/09/Que-Significa-UwU.jpg',
+    'https://noticias.nmas.com.mx/wp-content/uploads/2021/09/whatsapp-uwu-1280x720.jpg',
+    'https://c.tenor.com/AR8p1LHTOFEAAAAC/discord-uwu-sweat.gif',
+    'https://www.kindpng.com/picc/m/30-303034_cute-face-png-caritas-kawaii-transparent-png.png',
+    'me pones bien uwu',
+    'eres muy UwU',
+    'no digan UwU porque me pongo UwU',
+    'I uwu you',
+    'uwu <3',
+    'https://i.ytimg.com/vi/z6oSSeFGMiU/hqdefault.jpg',
+    'https://i.imgur.com/WdgwwCD.jpeg']
 
 matarse = [
     'Estas bien bro?',
@@ -234,7 +252,11 @@ seisnueve = [
     '( ͡° ͜ʖ ͡°)',
     ':smirk:',
     'y no invitan',
-    '96']
+    '96',
+    '68',
+    '70',
+    'con quien',
+    'omg funny number']
 
 cuatroveinte = [
     'saca la mota',
@@ -244,7 +266,14 @@ cuatroveinte = [
     ':maple_leaf:',
     'saca de la chistosa',
     'saca de la que dejó a pablo bien trabado',
-    'no se droguen']
+    'no se droguen',
+    'a cuanto la onza',
+    'saca de la que puso a dormir a elias a las 5 de la tarde',
+    'saca de la que sacó a pablo de la UDG',
+    'las drogas hacen daño',
+    'no olvides llevar una toalla',
+    'es medicinal we te lo juro',
+    'no soy adicto puedo parar cuando quiera']
 
 sexo = [
     'ya we',
@@ -259,7 +288,15 @@ sexo = [
     'elijo el camino del celibato',
     'practiquen la abstinencia',
     'no gracias',
-    'sex']
+    'sex',
+    'con quien',
+    'invita',
+    'saquen el sex',
+    'SEXOOOOOOOO',
+    'el sexo no existe solo existen los unos y ceros',
+    'me dan miedo las mujeres',
+    'el sexo es una construcción social',
+    '¿qué se siente tocar a una mujer? solo soy un simple bot :(']
 
 dm = [
     'Qué quieres puto negro',
@@ -275,4 +312,11 @@ dm = [
     'Pa q vergas me hablas por aquí moderfoker',
     'Puto estupido',
     'Pinche morro no me hables',
-    'Puto negro dejame en paz']
+    'Puto negro dejame en paz',
+    'CALLATE A LA VERGA',
+    'NO ME MANDES DM PUTO CHANGO',
+    'tortugas marinas :3',
+    'se antoja una pedota mamastrofica',
+    'feliz CUM aunque no sea tu cum',
+    'padrinoli no mandes dm',
+    'error 404']

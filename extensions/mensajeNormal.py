@@ -121,7 +121,7 @@ async def replyDirectMessage(event):
     if event.content == 'puto':
         await event.message.respond('No sea grosero mijo')
     else:
-        await event.message.respond('Por qué me envías DM pinche acosador')
+        await event.message.respond(random.choice(respuestas.dm))
         #await mensajeNormal.rest.create_message(320650670258520065, 'ayuda ya no quiero ser programador')
 
 def load(bot):
