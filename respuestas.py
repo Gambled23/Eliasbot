@@ -112,7 +112,17 @@ elias = [
     'No entiendo ahora el mundo\nNo comprenden el amor',
     'Puto roqui, se sabe todas las de badbuni',
     'Te voy a funar',
-    'Todo hombre vuelve a donde fue feliz\nAdopt me me llama'
+    'Todo hombre vuelve a donde fue feliz\nAdopt me me llama',
+    'Me metieron la vrga\nMe hubiera metido a cucea',
+    'No soy Oscar para darte termino medio',
+    'Mañana examen de mecanica en el Valle VFG 🤑',
+    'El Covenant me llamo comandante supremo',
+    'Hora de secuestrar monos',
+    'Nomas no se pasen de cangreburger',
+    'Cundo vaya a erectus voy a decir "Me da 100 pesos de sexo?"',
+    'Boing de mota',
+    'Wee\nVuelvete\nHomosexual',
+    'Mendigar cariño no es lo correcto'
 ]
 
 insulto = [
