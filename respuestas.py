@@ -205,7 +205,9 @@ lol = [
     'puta lux castrosa',
     'amomo main',
     'ligoleyen',
-    'joto el que vaya jungla']
+    'joto el que vaya jungla',
+    'sal y toca pasto un rato',
+    'lolazo']
 
 uwu = [
     'UwU',
@@ -229,7 +231,19 @@ uwu = [
     'I uwu you',
     'uwu <3',
     'https://i.ytimg.com/vi/z6oSSeFGMiU/hqdefault.jpg',
-    'https://i.imgur.com/WdgwwCD.jpeg']
+    'https://i.imgur.com/WdgwwCD.jpeg',
+    'uwumomento',
+    'n.n',
+    'ñ.ñ',
+    'etooo',
+    'onii-chan',
+    'NYA! ARIGATO',
+    'arigato, onii-chan uwu',
+    'UWU',
+    'https://ih1.redbubble.net/image.2967231268.4298/st,small,845x845-pad,1000x1000,f8f8f8.jpg',
+    'Uwu is an emoticon depicting a cute face. It is used to express various warm, happy, or affectionate feelings. A closely related emoticon is owo, which can more specifically show surprise and excitement.',
+    'OwU',
+    'pinche otaku we ya porfa']
 
 matarse = [
     'Estas bien bro?',
@@ -266,7 +280,8 @@ seisnueve = [
     '68',
     '70',
     'con quien',
-    'omg funny number']
+    'omg funny number',
+    'presenta']
 
 cuatroveinte = [
     'saca la mota',
@@ -278,7 +293,6 @@ cuatroveinte = [
     'saca de la que dejó a pablo bien trabado',
     'no se droguen',
     'a cuanto la onza',
-    'saca de la que puso a dormir a elias a las 5 de la tarde',
     'saca de la que sacó a pablo de la UDG',
     'las drogas hacen daño',
     'no olvides llevar una toalla',
@@ -329,4 +343,5 @@ dm = [
     'se antoja una pedota mamastrofica',
     'feliz CUM aunque no sea tu cum',
     'padrinoli no mandes dm',
-    'error 404']
+    'error 404',
+    'onii-chan']
