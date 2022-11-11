@@ -10,6 +10,7 @@ pip install -U hikari
 pip install hikari-lightbulb
 ```
 Despues solo debes ejecutar el bot.py con python, y el bot dejará de usar los archivos que tengas tú en la computadora y no los que estén en el repositorio de github.
+Es probable que haya librerias externas que necesites instalar, revisa el mensaje de error de la consola para saber cuales te faltan.
 ## Nociones basicas
 El bot se basa en 3 partes principales, bot.py, respuestas.py, y el folder extensions.
 
