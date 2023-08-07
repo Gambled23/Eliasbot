@@ -1,4 +1,6 @@
 from operator import truediv
+import os
+
 import hikari
 import lightbulb
 import sys
@@ -12,13 +14,18 @@ init(strip=not sys.stdout.isatty())
 from termcolor import cprint 
 from pyfiglet import figlet_format
 
-bot = lightbulb.BotApp(token='ODA5NDc5ODQwNDQ0MTg2NjU0.YCVs2Q.yODObIjLuocQuQxIGMo75i8CQYM',
-                       # La id del server para que el slash command no tarde tanto
-                       default_enabled_guilds=(315186853986828290)
-                       )
 
+bot = lightbulb.BotApp(
+   token='ODA5NDc5ODQwNDQ0MTg2NjU0.G84RmB.pZVRT5HveP1c3KYRQfzPziZ7fIdqWazO9v_dG8', 
+   intents = hikari.Intents.ALL,
+   )
                        
 bot.load_extensions_from('./extensions')
+
+if __name__ == '__main__':
+   if os.name != 'nt':
+      import uvloop
+      uvloop.install()
 
 @bot.listen(hikari.StartedEvent)
 async def botStarted(event):
