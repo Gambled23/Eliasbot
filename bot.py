@@ -6,6 +6,7 @@ import lightbulb
 import sys
 import cumpleanos
 import time
+
 hoy = time.gmtime()
 from extensions import fechas
 
@@ -33,7 +34,7 @@ async def botStarted(event):
    cprint(figlet_format('Eliasbot', font='roman'),
       'white', attrs=['bold'])
    cprint(figlet_format('made by: gambled23', font='straight'),
-      'yellow')   
+      'yellow')
     
    cumpleañero = cumpleanos.verificarCumpleaños() #Cada que se inicia el bot revisa si es el cumpleaños de alguien
    if cumpleañero != None:
