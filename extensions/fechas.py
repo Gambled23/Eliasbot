@@ -16,7 +16,7 @@ def revisarFechas():
     if hoy.tm_mon == 12 and hoy.tm_mday == 24:
         return 'Feliz nochebuena te desea eliasbot :christmas_tree:'
     if hoy.tm_mon == 11 and hoy.tm_mday == 17:
-        return f'Hoy hace {hoy.tm_year - 2019} el gobierno de prepa 9, feliz aniversario les desea eliasbot :Pogchamp:'
+        return f'Hoy hace {hoy.tm_year - 2019} años cayó prepa 9, feliz aniversario les desea eliasbot :Pogchamp:'
     if hoy.tm_mon == 5 and hoy.tm_mday == 5:
         return 'feliz sinco de mayo'
     if hoy.tm_mon == 1 and hoy.tm_mday == 1:
