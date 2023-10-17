@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/cesar/eliasbot
+cd /home/cesar/Eliasbot
 source venv/bin/activate
 
 while true; do
